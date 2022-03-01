@@ -18,7 +18,7 @@
             <ComboBox Width="198" Height="27">
                 <ComboBoxItem Content="Good"></ComboBoxItem>
                 <ComboBoxItem Content="Evil"></ComboBoxItem>
-                <ComboBoxItem Content="----"</ComboBoxItem>
+                <ComboBoxItem Content="noside"></ComboBoxItem>
             </ComboBox>
 
             <Button Content="Save" Click="NewHeroButton" Padding="10"/>

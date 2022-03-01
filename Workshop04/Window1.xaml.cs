@@ -25,7 +25,6 @@ namespace Workshop04
         }
         private void NewHeroButton(object sender, RoutedEventArgs e)
         {
-            (this.DataContext as MainWindowsViewModel).AddToArmy();
         }
     }
 }
