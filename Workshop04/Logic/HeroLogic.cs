@@ -9,7 +9,7 @@ using Workshop04.Services;
 
 namespace Workshop04.Logic
 {
-    class HeroLogic
+    class HeroLogic : IHeroLogic
     {
         IList<Hero> heroes;
 
@@ -47,16 +47,16 @@ namespace Workshop04.Logic
             this.activeHeroes = activeHeroes;
         }
 
-        public void AddToArmy(Hero hero)
+        public void AddToActiveHeroes(Hero hero)
         {
             heroes.Add(hero.GetCopy());
-            messenger.Send("Trooper added", "TrooperInfo");
+            messenger.Send("Hero added", "HeroInfo");
         }
 
-        public void RemoveFromArmy(Hero hero)
+        public void RemoveFromActiveHeroes(Hero hero)
         {
             heroes.Remove(hero);
-            messenger.Send("Trooper removed", "TrooperInfo");
+            messenger.Send("Hero removed", "HeroInfo");
         }
     }
 }
