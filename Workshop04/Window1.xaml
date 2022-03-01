@@ -4,22 +4,23 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Workshop04"
+        xmlns:vms="clr-namespace:Workshop04.ViewModels"
+        xmlns:helpers="clr-namespace:Workshop04.Helpers"
         mc:Ignorable="d"
         Title="Window1" Height="472" Width="634">
+    <Window.Resources>
+        <helpers:StringToSideEnumConverter x:Key="enumconvert" />
+    </Window.Resources>
     <Grid>
         <StackPanel x:Name="stack">
             <Label Content="Name" Padding="10" Background="LightBlue" />
-            <TextBox Text="{Binding Name, UpdateSourceTrigger=Explicit}" Padding="10"/>
+            <TextBox Text="{Binding Actual.Name, UpdateSourceTrigger=Explicit}" Padding="10"/>
             <Label Content="Power" Padding="10" Background="LightBlue" />
-            <TextBox Text="{Binding Power, UpdateSourceTrigger=Explicit}" Padding="10"/>
+            <TextBox Text="{Binding Actual.Power, UpdateSourceTrigger=Explicit}" Padding="10"/>
             <Label Content="Speed" Padding="10" Background="LightBlue" />
-            <TextBox Text="{Binding Speed, UpdateSourceTrigger=Explicit}" Padding="10"/>
+            <TextBox Text="{Binding Actual.Speed, UpdateSourceTrigger=Explicit}" Padding="10"/>
             <Label Content="Side" Padding="10" Background="LightBlue" />
-            <ComboBox Width="198" Height="27">
-                <ComboBoxItem Content="Good"></ComboBoxItem>
-                <ComboBoxItem Content="Evil"></ComboBoxItem>
-                <ComboBoxItem Content="noside"></ComboBoxItem>
-            </ComboBox>
+            <ComboBox ItemsSource="{Binding Items}" SelectedValue="{Binding Actual.Side, Mode=OneWayToSource}" Width="198" Height="27"/>
 
             <Button Content="Save" Click="NewHeroButton" Padding="10"/>
         </StackPanel>

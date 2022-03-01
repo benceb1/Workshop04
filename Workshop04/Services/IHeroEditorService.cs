@@ -9,6 +9,6 @@ namespace Workshop04.Services
 {
     interface IHeroEditorService
     {
-        void Create(Hero hero);
+        void Create();
     }
 }

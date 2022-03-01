@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Workshop04.ViewModels;
 
 namespace Workshop04
 {
@@ -22,6 +23,9 @@ namespace Workshop04
         public Window1()
         {
             InitializeComponent();
+            var vm = new HeroEditorViewModel();
+            vm.Setup(new Models.Hero());
+            this.DataContext = vm;
         }
         private void NewHeroButton(object sender, RoutedEventArgs e)
         {

@@ -9,9 +9,9 @@ namespace Workshop04.Services
 {
     class HeroEditorService : IHeroEditorService
     {
-        public void Create(Hero hero)
+        public void Create()
         {
-            throw new NotImplementedException();
+            new Window1().ShowDialog();
         }
     }
 }

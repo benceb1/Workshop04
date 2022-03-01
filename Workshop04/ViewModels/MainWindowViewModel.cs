@@ -98,6 +98,9 @@ namespace Workshop04.ViewModels
                 () => logic.RemoveFromActiveHeroes(SelectedFromActiveHeroes),
                 () => SelectedFromActiveHeroes != null
                 );
+
+            NewHeroCommand = new RelayCommand(() => logic.EditHero(), () => true);
+
             Messenger.Register<MainWindowViewModel, string, string>(this, "HeroInfo", (recipient, msg) =>
             {
                 OnPropertyChanged("AVGPower");

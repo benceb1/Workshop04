@@ -11,5 +11,6 @@ namespace Workshop04.Logic
         void AddToActiveHeroes(Hero hero);
         void RemoveFromActiveHeroes(Hero hero);
         void SetupCollections(IList<Hero> heroes, IList<Hero> activeHeroes);
+        void EditHero();
     }
 }

@@ -48,6 +48,7 @@
         <StackPanel Grid.Column="1">
             <Button Content="Add To ActiveHeroes" Command="{Binding AddToActiveHeroesCommand}" Margin="10" Padding="10" />
             <Button Content="Remove From ActiveHeroes" Command="{Binding RemoveFromActiveHeroesCommand}" Margin="10" Padding="10" />
+            <Button Content="New Hero" Command="{Binding NewHeroCommand}" Margin="10" Padding="10" />
             <Label HorizontalContentAlignment="Center" FontSize="14"
                 Content="{Binding AVGPower}" ContentStringFormat="Power: {0}" />
             <ProgressBar Height="20" Maximum="10" 

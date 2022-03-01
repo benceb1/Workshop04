@@ -58,5 +58,10 @@ namespace Workshop04.Logic
             heroes.Remove(hero);
             messenger.Send("Hero removed", "HeroInfo");
         }
+
+        public void EditHero()
+        {
+            editorService.Create();
+        }
     }
 }
