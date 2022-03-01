@@ -1,0 +1,27 @@
+﻿<Window x:Class="Workshop04.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Workshop04"
+        mc:Ignorable="d"
+        Title="Window1" Height="472" Width="634">
+    <Grid>
+        <StackPanel x:Name="stack">
+            <Label Content="Name" Padding="10" Background="LightBlue" />
+            <TextBox Text="{Binding Name, UpdateSourceTrigger=Explicit}" Padding="10"/>
+            <Label Content="Power" Padding="10" Background="LightBlue" />
+            <TextBox Text="{Binding Power, UpdateSourceTrigger=Explicit}" Padding="10"/>
+            <Label Content="Speed" Padding="10" Background="LightBlue" />
+            <TextBox Text="{Binding Speed, UpdateSourceTrigger=Explicit}" Padding="10"/>
+            <Label Content="Side" Padding="10" Background="LightBlue" />
+            <ComboBox Width="198" Height="27">
+                <ComboBoxItem Content="Good"></ComboBoxItem>
+                <ComboBoxItem Content="Evil"></ComboBoxItem>
+                <ComboBoxItem Content="----"</ComboBoxItem>
+            </ComboBox>
+
+            <Button Content="Save" Click="NewHeroButton" Padding="10"/>
+        </StackPanel>
+    </Grid>
+</Window>

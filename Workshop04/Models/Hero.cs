@@ -9,7 +9,7 @@ namespace Workshop04.Models
 {
     public enum Side { Good, Evil, NoSide };
 
-    class Hero : ObservableObject
+    public class Hero : ObservableObject
     {
         private string name;
 
